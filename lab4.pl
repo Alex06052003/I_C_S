@@ -24,8 +24,6 @@ game("Rainbow Six Siege", tactical_shooter, pc, 8.9).
 game("Final Fantasy VII Remake", rpg, ps4, 9.0).
 game("Apex Legends", battle_royale, pc, 8.7).
 
-% Rules for recommending games based on preferences
-
 % Рекомендация по жанру
 recommend_by_genre(Genre, Game) :-
     game(Game, Genre, _, _).
@@ -49,7 +47,7 @@ final_recommendation(Genre, Platform, Rating, Game) :-
     recommendation(Genre, Platform, Game),
     recommend_by_rating(Rating, Game).
 
-% Простой интерфейс для пользователя
+% Интерфейс для пользователя
 recommend_by_genre_interface :-
     write('Enter the genre: '),
     read(Genre),
@@ -103,7 +101,7 @@ print_games([Game|Games]) :-
 % Флаг для отслеживания необходимости завершения программы
 :- dynamic should_exit/0.
 
-% Основной предикат для запуска интерфейса
+% Запуска интерфейса
 start :-
     \+ should_exit,
     write('Welcome to the Game Recommendation System!'), nl,
