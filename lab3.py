@@ -1,3 +1,7 @@
+# Лабораторная работа 3
+# Тема: 3D крестики-нолики
+# Об игре: https://en.wikipedia.org/wiki/3D_tic-tac-toe
+
 import itertools
 import random
 import copy
